@@ -6,11 +6,12 @@ from routers import login, user, weather, location
 
 app = FastAPI()
 
-# origins = ['https://localhost:3000']
+origins = ['https://localhost:3000']
 
 # Add middleware for Cross-Origin Resource Sharing (CORS)
 app.add_middleware(
     CORSMiddleware,
+    allow_credentials=True,
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],

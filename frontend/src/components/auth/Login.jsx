@@ -42,7 +42,7 @@ export const Login = ({ history }) => {
   const navigate = useNavigate()
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("");  
 
   const dispatch = useDispatch();
 
@@ -73,9 +73,9 @@ export const Login = ({ history }) => {
         action="/dashboard">
         
         <label>Email</label>
-        <input type={"email"} placeholder="enter email" onChange={(e) => setEmail(e.target.value)}/>
+        <input type={"email"} value={email} placeholder="enter email" onChange={(e) => setEmail(e.target.value)}/>
         <label>Password</label>
-        <input type={"password"} placeholder="enter password" onChange={(e) => setPassword(e.target.value)}/>
+        <input type={"password"} value={password} placeholder="enter password" onChange={(e) => setPassword(e.target.value)}/>
         <button
               type="submit"
             >
